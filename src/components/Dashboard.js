@@ -16,7 +16,7 @@ const Dashboard = (props) => {
         if(!jwt) {
             props.history.push('/')
         }
-        axios.get('https://deepak-social-login.herokuapp.com/api/profile', { headers: {
+        axios.get('http://localhost:8080/api/profile', { headers: {
             Authorization: 'Bearer ' + jwt
         }}).then((res) => {
             setName(res.data.name)
