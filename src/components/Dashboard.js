@@ -16,7 +16,7 @@ const Dashboard = (props) => {
         if(!jwt) {
             props.history.push('/')
         }
-        axios.get('http://localhost:3001/profile', { headers: {
+        axios.get('http://localhost:5000/api/profile', { headers: {
             Authorization: 'Bearer ' + jwt
         }}).then((res) => {
             setName(res.data.name)
